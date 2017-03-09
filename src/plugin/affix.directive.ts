@@ -32,7 +32,7 @@ export class ScrollSpyAffixDirective implements AfterViewInit, OnDestroy {
   public affix: boolean = false;
   public affixTop: boolean = false;
   public affixBottom: boolean = false;
-  
+
   public defaultOptions: ScrollSpyAffixOptions = {
     topMargin: 0,
     bottomMargin: 0
@@ -69,6 +69,8 @@ export class ScrollSpyAffixDirective implements AfterViewInit, OnDestroy {
           setTimeout(() => this.update(e.target.scrollingElement.scrollTop));
         } else if (typeof e.target.scrollY !== 'undefined') {
           setTimeout(() => this.update(e.target.scrollY));
+        } else if (typeof e.target.pageYOffset !== 'undefined') {
+          setTimeout(() => this.update(e.target.pageYOffset));
         }
       });
     }
