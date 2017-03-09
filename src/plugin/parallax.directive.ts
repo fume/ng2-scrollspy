@@ -138,6 +138,8 @@ export class ScrollSpyParallaxDirective implements OnInit, AfterViewInit, OnDest
       currentScrollPosition = target.scrollY;
     } else if (typeof target.pageYOffset !== 'undefined') {
       currentScrollPosition = target.pageYOffset;
+    } else if (target.parentWindow && target.parentWindow.pageYOffset) {
+      currentScrollPosition = target.parentWindow.pageYOffset;
     }
 
     let result: string;
