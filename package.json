@@ -1,5 +1,6 @@
 {
   "name": "ng2-scrollspy",
+  "version": "0.3.9",
   "description": "Angular2 ScrollSpy Service",
   "author": "João Ribeiro <jonnybgod@gmail.com> (http://github.com/JonnyBGod)",
   "devDependencies": {
